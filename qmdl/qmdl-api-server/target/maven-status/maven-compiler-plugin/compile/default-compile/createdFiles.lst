@@ -1,6 +1,0 @@
-com\qmdl\web\api\server\restful\uploadTest.class
-com\qmdl\web\api\server\filter\RequestFilter.class
-com\qmdl\web\api\server\base\BaseRestful.class
-com\qmdl\web\api\server\restful\IndexRestful.class
-com\qmdl\web\api\server\register\RestfulApplicationAPI.class
-com\qmdl\web\api\server\restful\UserRestful.class
