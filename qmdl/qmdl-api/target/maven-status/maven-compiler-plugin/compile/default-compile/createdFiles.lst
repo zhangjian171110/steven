@@ -1,0 +1,8 @@
+com\qmdl\web\api\model\entity\IsUpdateRequest.class
+com\qmdl\web\api\model\entity\CarouselInfoRequest.class
+com\qmdl\web\api\model\entity\UserRequest.class
+com\qmdl\web\api\model\base\ResultData.class
+com\qmdl\web\api\model\tools\IndexTools.class
+com\qmdl\web\api\model\tools\UserTools.class
+com\qmdl\web\api\model\entity\BaseRequest.class
+com\qmdl\web\api\model\base\ResultCodeMsg.class

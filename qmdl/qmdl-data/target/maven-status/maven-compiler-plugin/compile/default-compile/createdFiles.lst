@@ -1,0 +1,10 @@
+com\qmdl\web\data\service\IUserService.class
+com\qmdl\web\data\mapper\UserMapper.class
+com\qmdl\web\data\service\impl\UserServiceImpl.class
+com\qmdl\web\data\service\base\BaseServiceImpl.class
+com\qmdl\web\data\mapper\CarouselInfoMapper.class
+com\qmdl\web\data\service\impl\IsupdateServiceImpl.class
+com\qmdl\web\data\service\impl\CarouselInfoServiceImpl.class
+com\qmdl\web\data\service\IIsupdateService.class
+com\qmdl\web\data\service\ICarouselInfoService.class
+com\qmdl\web\data\mapper\IsupdateMapper.class

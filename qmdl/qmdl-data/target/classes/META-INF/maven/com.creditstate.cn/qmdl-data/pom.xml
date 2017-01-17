@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.creditstate.cn</groupId>
+		<artifactId>qmdl</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<artifactId>qmdl-data</artifactId>
+	<name>qmdl-data</name>
+	<description>数据服务</description>
+
+	<properties>
+		<druid.version>1.0.26</druid.version>
+		<mysql-connector-java.version>5.1.38</mysql-connector-java.version>
+	</properties>
+	<dependencies>
+		<!-- mybatis-plus -->
+		<dependency>
+			<groupId>com.creditstate.cn</groupId>
+			<artifactId>qmdl-model</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<!-- data begin -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${druid.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-connector-java.version}</version>
+		</dependency>
+		<!-- data end -->
+	</dependencies>
+</project>

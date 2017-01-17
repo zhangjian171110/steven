@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.creditstate.cn</groupId>
+    <artifactId>qmdl</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <artifactId>qmdl-model</artifactId>
+  <name>qmdl-model</name>
+  <description>实体类</description>
+  
+  
+  <dependencies>
+		<!-- mybatis-plus -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-plus</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+  </dependencies>
+  
+</project>
