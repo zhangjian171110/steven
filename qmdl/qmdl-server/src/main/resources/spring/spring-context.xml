@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<description>Spring公共配置</description>
+
+	<!--开启注解 -->
+	<context:annotation-config />
+	<!-- 扫描 service -->
+	<context:component-scan base-package="com.hgzx.hspt.smef.server.service" />
+
+	<!-- 定义受环境影响易变的变量 -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="locations">
+			<list>
+				<!-- 标准配置 -->
+				<value>classpath:*.properties</value>
+				<!-- 测试环境配置 -->
+				<!--<value>file:/d:/conf/cl/commodity-server/*.properties</value> -->
+				<!-- 生产环境配置 -->
+				<!--<value>file:/server/config/hspt-manage-server/*.properties</value> -->
+			</list>
+		</property>
+	</bean>
+	<!-- 获取ApplicationContext上下文 -->
+	<bean id="springContextHolder" class="com.hgzx.hspt.smef.server.spring.SpringContextHolder" />
+	<!-- 配置controller可读取配置文件 -->
+	<!-- 标准、测试环境配置 -->
+	<util:properties id="config" location="classpath:config.properties" />
+	<!-- 生产环境配置 -->
+	<!-- <util:properties id="config" location="file:/server/config/hspt-manage-server/config.properties"/> -->
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxUploadSize" value="20971520" />
+	</bean>
+
+</beans>
